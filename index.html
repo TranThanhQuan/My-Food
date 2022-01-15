@@ -14,10 +14,11 @@
     
 </head>
 <body>
+    <!-- HEADER -->
         <div class="header">
             <ul class="header-navbar">
-                <li class="header-navbar__item">
-                    <i class="fas fa-bars header-navbar__icon"></i>
+                <li class="header-navbar__item js-category">
+                    <i class="fas fa-bars header-navbar__icon "></i>
                 </li>
                 <li class="header-navbar__item">
                     <p>My Food</p>
@@ -28,6 +29,19 @@
             </ul>
         </div>
 
+
+        <!-- MODAL -->
+        <div class="modal">
+            <ul class="modal-list js-modal-list">
+                <li class="modal-item js-modal-close">Close Menu</li>
+                <li class="modal-item">Food</li>
+                <li class="modal-item">About</li>
+            </ul>
+        </div>
+
+
+
+        <!-- CONTAINER -->
         <div class="container">
             <!-- 1 -->
             <div class="l-3 container-product">
@@ -97,7 +111,7 @@
                 </div>
             </div>
 
-                <!-- 6 -->
+            <!-- 6 -->
             <div class="l-3 container-product">
                 <div class="container-product__item">
                     
@@ -111,7 +125,7 @@
                 </div>
             </div>
 
-                <!-- 7 -->
+            <!-- 7 -->
             <div class="l-3 container-product">
                 <div class="container-product__item">
                     
@@ -140,7 +154,7 @@
             </div>
 
 
-
+            <!-- PAGINATION -->
             <ul class="pagination">
                 <li class="pagination__item">
                     <a href="" class="pagination__item-link">
@@ -171,7 +185,7 @@
                 </li>
             </ul>
 
-
+            <!-- ABOUT -->
             <div class="about">
                 <h3 class="about__title">About Me, The Food Man</h3>
                 <img src="https://www.w3schools.com/w3images/chef.jpg" alt="" class="about__img">
@@ -185,12 +199,9 @@
                       Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
                        porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
             </div>
-
-
-
-
-
         </div>
+
+        <!-- FOOTER -->
         <div class="footer">
             <div class="l-4 footer-footer">
                 <h3 class="footer__title">FOOTER</h3>
@@ -201,6 +212,7 @@
                     Powered by 
                     <a href="" class="footer__powered-link">abc</a></div>
             </div>
+
             <div class="l-4 footer-blog-post">
                 <h3 class="blog-post__title">BOLG POSTS</h3>
                     <div class="blog-post__list">
@@ -222,9 +234,6 @@
                     </div>
             </div>
 
-
-
-
             <div class="l-4 footer-popular-tags">
                 <h3 class="popular-title">POPULAR TAGS</h3>
                 <ul class="popular-tag">
@@ -243,9 +252,28 @@
                     <li class="tag">Frish</li>
                     <li class="tag">Duck</li>
 
-                </ul>
-
-                
+                </ul>                
             </div>
+
+
+            
+    <script>
+        const categotyBtn = document.querySelector('.js-category')
+        const modal = document.querySelector('.js-modal-list')
+        const modalClose = document.querySelector('.js-modal-close')
+
+        function showCategory (){
+            modal.classList.add('modal-list-open')
+        }
+
+        function hideCategoty (){
+            modal.classList.remove('modal-list-open')
+        }
+
+        categotyBtn.addEventListener('click', showCategory)
+        modalClose.addEventListener('click', hideCategoty)
+
+
+    </script>
 </body>
 </html>
